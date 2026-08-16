@@ -1,1 +1,5 @@
 com\design3d\generator\ObjGeneratorTest.class
+com\design3d\service\TeacherFormatRealSamplesTest.class
+com\design3d\service\AdditionalJsonFormatsTest.class
+com\design3d\service\RoomPolygonTopologyTest.class
+com\design3d\service\TeacherLayoutAdapterTest.class

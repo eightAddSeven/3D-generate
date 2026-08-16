@@ -16,6 +16,7 @@ D:\A-方案图纸生成\backend\src\main\java\com\design3d\config\OpenApiConfig.
 D:\A-方案图纸生成\backend\src\main\java\com\design3d\controller\HealthController.java
 D:\A-方案图纸生成\backend\src\main\java\com\design3d\generator\GltfGenerator.java
 D:\A-方案图纸生成\backend\src\main\java\com\design3d\model\entity\Message.java
+D:\A-方案图纸生成\backend\src\main\java\com\design3d\service\WallTopologyNormalizer.java
 D:\A-方案图纸生成\backend\src\main\java\com\design3d\model\entity\ModelFile.java
 D:\A-方案图纸生成\backend\src\main\java\com\design3d\service\TeacherLayoutAdapter.java
 D:\A-方案图纸生成\backend\src\main\java\com\design3d\generator\GltfWriter.java
