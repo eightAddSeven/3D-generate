@@ -1,1 +1,0 @@
-Unable to parse command line options: Unrecognized option: --spring.datasource.url=jdbc:h2:mem:swaggerverify;DB_CLOSE_DELAY=-1

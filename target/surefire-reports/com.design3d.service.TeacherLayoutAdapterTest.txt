@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.design3d.service.TeacherLayoutAdapterTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in com.design3d.service.TeacherLayoutAdapterTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.design3d.service.TeacherLayoutAdapterTest

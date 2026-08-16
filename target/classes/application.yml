@@ -41,16 +41,57 @@ spring:
 app:
   file-storage:
     model-dir: ${data.dir}/models
+
   layout:
+
+    # 标准 RoomLayout / 老师识别格式的默认墙高
     default-wall-height: 2800
+
+    # 标准 RoomLayout 的默认墙厚
     default-wall-thickness: 240
+
     teacher-format:
-      # 老师识别结果使用图像坐标；缺少图纸比例尺时按 1 坐标单位 = 10 mm 换算。
+
+      # 老师识别结果的图像坐标比例
       mm-per-coordinate: 10
+
+    polygon-format:
+
+      # raw_room_data 房间多边形专用比例尺
+      #
+      # 如果 JSON 中存在：
+      #
+      # layout_meta.mm_per_coordinate
+      #
+      # 则这里会被覆盖。
+      mm-per-coordinate: 10
+
+      # polygon 输入目前更适合使用较薄的默认墙。
+      #
+      # 原来的 240 mm 对 f1 来说偏厚。
+      wall-thickness: 150
+
+      # 端点吸附阈值。
+      #
+      # 例如：
+      #
+      # x=300
+      # x=301
+      #
+      # 会统一。
+      snap-epsilon: 2.0
+
+      # 与水平/垂直方向夹角小于 4° 时，
+      # 自动正交化。
+      orthogonal-angle-degrees: 4.0
+
+      # 低于 1 个坐标单位的线段认为是噪声。
+      min-segment-length: 1.0
 
 springdoc:
   api-docs:
     path: /v3/api-docs
+
   swagger-ui:
     path: /swagger-ui.html
     tags-sorter: alpha
