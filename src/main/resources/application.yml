@@ -1,0 +1,57 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: 3DBuildingModelingEngine
+
+  profiles:
+    active: dev
+
+  datasource:
+    url: jdbc:h2:file:${data.dir}/h2/design3d;DB_CLOSE_DELAY=-1;MODE=MySQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    open-in-view: false
+
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 30MB
+      location: ${data.dir}/temp
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+  jackson:
+    default-property-inclusion: non_null
+
+app:
+  file-storage:
+    model-dir: ${data.dir}/models
+  layout:
+    default-wall-height: 2800
+    default-wall-thickness: 240
+    teacher-format:
+      # 老师识别结果使用图像坐标；缺少图纸比例尺时按 1 坐标单位 = 10 mm 换算。
+      mm-per-coordinate: 10
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
