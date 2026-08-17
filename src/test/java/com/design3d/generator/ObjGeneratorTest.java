@@ -5,16 +5,21 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-
 import static org.assertj.core.api.Assertions.assertThat;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Objects;
 
 class ObjGeneratorTest {
 
     @Test
     void generatesGroupedObjWithRealDoorAndWindowVoids() throws Exception {
-        String json = Files.readString(Path.of("..", "docs", "sample-room-layout.json"));
+        String json;
+        try (var input = Objects.requireNonNull(
+                ObjGeneratorTest.class.getResourceAsStream("/sample-room-layout.json"),
+                "sample-room-layout.json not found")) {
+            json = new String(input.readAllBytes(), StandardCharsets.UTF_8);
+        }
         RoomLayout layout = new ObjectMapper().readValue(json, RoomLayout.class);
 
         String obj = new String(new ObjGenerator().generate(layout), StandardCharsets.UTF_8);

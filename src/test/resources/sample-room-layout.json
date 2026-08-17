@@ -1,0 +1,180 @@
+{
+  "version": "1.0",
+  "unit": "mm",
+  "layout": {
+    "width": 8000,
+    "depth": 6000,
+    "height": 2800,
+    "wallThickness": 240
+  },
+  "rooms": [
+    {
+      "id": "living_1",
+      "name": "客厅",
+      "type": "living_room",
+      "position": { "x": 0, "z": 0 },
+      "size": { "width": 5000, "depth": 4500 },
+      "floor": { "material": "wood_light", "color": "#D2B48C" },
+      "walls": [
+        {
+          "id": "wall_living_north",
+          "start": { "x": 0, "z": 0 },
+          "end": { "x": 5000, "z": 0 },
+          "height": 2800,
+          "color": "#F5F0E8",
+          "openings": [
+            { "type": "window", "position": 2000, "width": 1800, "height": 1500, "sillHeight": 900 }
+          ]
+        },
+        {
+          "id": "wall_living_east",
+          "start": { "x": 5000, "z": 0 },
+          "end": { "x": 5000, "z": 4500 },
+          "height": 2800,
+          "color": "#F5F0E8",
+          "openings": []
+        },
+        {
+          "id": "wall_living_south",
+          "start": { "x": 0, "z": 4500 },
+          "end": { "x": 5000, "z": 4500 },
+          "height": 2800,
+          "color": "#F5F0E8",
+          "openings": [
+            { "type": "door", "position": 2500, "width": 900, "height": 2100 }
+          ]
+        },
+        {
+          "id": "wall_living_west",
+          "start": { "x": 0, "z": 0 },
+          "end": { "x": 0, "z": 4500 },
+          "height": 2800,
+          "color": "#F5F0E8",
+          "openings": []
+        }
+      ],
+      "furniture": [
+        {
+          "id": "sofa_1",
+          "type": "sofa",
+          "category": "seating",
+          "position": { "x": 1000, "z": 3500 },
+          "rotation": 180,
+          "size": { "width": 2500, "depth": 900, "height": 850 },
+          "color": "#808080"
+        },
+        {
+          "id": "table_1",
+          "type": "coffee_table",
+          "category": "table",
+          "position": { "x": 2200, "z": 2800 },
+          "rotation": 0,
+          "size": { "width": 1200, "depth": 600, "height": 450 },
+          "color": "#5C4033"
+        },
+        {
+          "id": "tv_stand_1",
+          "type": "tv_stand",
+          "category": "storage",
+          "position": { "x": 2500, "z": 200 },
+          "rotation": 0,
+          "size": { "width": 2000, "depth": 500, "height": 500 },
+          "color": "#3E2723"
+        },
+        {
+          "id": "rug_1",
+          "type": "rug",
+          "category": "decoration",
+          "position": { "x": 2200, "z": 2800 },
+          "rotation": 0,
+          "size": { "width": 3000, "depth": 2000, "height": 10 },
+          "color": "#D2B48C"
+        },
+        {
+          "id": "plant_1",
+          "type": "plant",
+          "category": "decoration",
+          "position": { "x": 4600, "z": 4200 },
+          "rotation": 0,
+          "size": { "width": 400, "depth": 400, "height": 1200 },
+          "color": "#228B22"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_1",
+      "name": "厨房",
+      "type": "kitchen",
+      "position": { "x": 5000, "z": 0 },
+      "size": { "width": 3000, "depth": 2500 },
+      "floor": { "material": "paint_gray", "color": "#CCCCCC" },
+      "walls": [
+        {
+          "id": "wall_kitchen_north",
+          "start": { "x": 5000, "z": 0 },
+          "end": { "x": 8000, "z": 0 },
+          "height": 2800,
+          "color": "#FFFFFF",
+          "openings": [
+            { "type": "window", "position": 1500, "width": 1200, "height": 1200, "sillHeight": 1000 }
+          ]
+        },
+        {
+          "id": "wall_kitchen_east",
+          "start": { "x": 8000, "z": 0 },
+          "end": { "x": 8000, "z": 2500 },
+          "height": 2800,
+          "color": "#FFFFFF",
+          "openings": []
+        },
+        {
+          "id": "wall_kitchen_south",
+          "start": { "x": 5000, "z": 2500 },
+          "end": { "x": 8000, "z": 2500 },
+          "height": 2800,
+          "color": "#FFFFFF",
+          "openings": []
+        },
+        {
+          "id": "wall_kitchen_west",
+          "start": { "x": 5000, "z": 0 },
+          "end": { "x": 5000, "z": 2500 },
+          "height": 2800,
+          "color": "#FFFFFF",
+          "openings": [
+            { "type": "archway", "position": 1250, "width": 1500, "height": 2400 }
+          ]
+        }
+      ],
+      "furniture": [
+        {
+          "id": "counter_1",
+          "type": "kitchen_counter",
+          "category": "storage",
+          "position": { "x": 5200, "z": 2100 },
+          "rotation": 0,
+          "size": { "width": 2600, "depth": 600, "height": 850 },
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "stove_1",
+          "type": "stove",
+          "category": "appliance",
+          "position": { "x": 6000, "z": 2100 },
+          "rotation": 0,
+          "size": { "width": 600, "depth": 600, "height": 850 },
+          "color": "#333333"
+        },
+        {
+          "id": "dining_table_1",
+          "type": "dining_table",
+          "category": "table",
+          "position": { "x": 6500, "z": 800 },
+          "rotation": 0,
+          "size": { "width": 1400, "depth": 800, "height": 750 },
+          "color": "#8B4513"
+        }
+      ]
+    }
+  ]
+}
